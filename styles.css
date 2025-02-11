@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  --transition: all 0.3s linear;
+}
+body {
+  font-family: "Poppins";
+  font-style: normal;
+  text-transform: capitalize;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1rem;
+}
+section {
+  width: 100%;
+  height: 100vh;
+}
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-info {
+  background-color: var(--clr-grey-8);
+  width: 50%;
+  height: 100%;
+  place-content: center;
+  padding: 5rem;
+  animation: heroanime 1s forwards;
+}
+.my-info p {
+  font-size: 1.5rem;
+}
+.my-info span {
+  color: gold;
+}
+.my-pic {
+  width: 50%;
+  height: 100%;
+  background-image: url("image/me.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  place-content: center;
+  place-items: end;
+  animation: heroanime1 1s forwards;
+}
+.cv-btn {
+  background-color: gold;
+  margin-top: 1rem;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 1rem;
+  text-transform: capitalize;
+}
+.cv-btn:hover {
+  background-color: var(--clr-primary-4);
+  width: 12rem;
+  height: 2.5rem;
+  transition: var(--transition);
+  color: #fff;
+}
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  place-content: center;
+  z-index: 0;
+  visibility: hidden;
+}
+nav ul li {
+  margin-left: 4rem;
+  font-size: 1.8rem;
+  display: inline;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: block;
+  visibility: visible;
+  z-index: 1000;
+  transition: all 1s ease-out;
+  box-shadow: var(--dark-shadow);
+}
+.links-container {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: none;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+nav #link a{
+  color: black;
+}
+nav #link a:hover{
+  color: var(--clr-primary-3);
+}
+.links-container .links a {
+  color: black;
+  font-size: 3rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.links-cont {
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: linksanime 5s ease-out forwards;
+}
+.links:nth-child(1) i{
+  color: var(--clr-primary-2);
+}
+.links:nth-child(1) {
+  animation: linksanime 2s ease-in 2s forwards;
+}
+.links:nth-child(2) i{
+  color: var(--clr-primary-1);
+}
+.links:nth-child(2) {
+  animation: linksanime 3s ease-in forwards;
+}
+.links:nth-child(3) i{
+  color: rgba(225, 48, 108, 1);
+}
+.links:nth-child(3) {
+  animation: linksanime 4s ease-in forwards;
+}
+.links:nth-child(4) {
+  animation: linksanime 5s ease-in forwards;
+}
+.about {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.my-pic-1 {
+  width: 50%;
+  height: 100%;
+}
+.my-info-2 {
+  width: 50%;
+  height: 100%;
+  font-size: 1.5rem;
+  transform: translateY(100%);
+}
+.my-info-2.show {
+  animation: about 2s forwards;
+}
+.info-2-container {
+  margin-top: 5rem;
+}
+.skills {
+  display: grid;
+  grid-template-columns: 15rem 15rem 15rem;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.skills .box {
+  width: 15rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-grey-10);
+  box-shadow: var(--dark-shadow);
+}
+.box:hover {
+  transform: translateY(-10px);
+}
+.box h4 {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+.box img {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+}
+.portfolio {
+  background-color: var(--clr-grey-10);
+  width: 100%;
+  height: 100vh;
+}
+.portfolio h2 {
+  text-align: center;
+}
+.portfolio-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30rem 30rem 30rem;
+  gap: 2rem;
+  padding: 3rem;
+}
+.port-box {
+  width: 30rem;
+  height: 20rem;
+  filter: saturate(0);
+}
+.port-box:hover {
+  filter: saturate(1);
+}
+.fellow {
+  background-image: url("image/fellow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  place-content: center;
+}
+.mentor {
+  background-image: url("image/frontmentor.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.machine {
+  background-image: url("image/machine.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#contact {
+  height: 30vh;
+}
+#contact h2 {
+  text-align: center;
+}
+.contact-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-container div {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  row-gap: 1rem;
+}
+.contact:hover i {
+  color: blue;
+}
+
+@keyframes heroanime {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes heroanime1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes about {
+  100% {
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+@keyframes linksanime {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
