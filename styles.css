@@ -127,10 +127,10 @@ nav ul li {
   margin-right: 1rem;
   overflow: hidden;
 }
-nav #link a{
+nav #link a {
   color: black;
 }
-nav #link a:hover{
+nav #link a:hover {
   color: var(--clr-primary-3);
 }
 .links-container .links a {
@@ -143,19 +143,19 @@ nav #link a:hover{
   opacity: 0;
   animation: linksanime 5s ease-out forwards;
 }
-.links:nth-child(1) i{
+.links:nth-child(1) i {
   color: var(--clr-primary-2);
 }
 .links:nth-child(1) {
   animation: linksanime 2s ease-in 2s forwards;
 }
-.links:nth-child(2) i{
+.links:nth-child(2) i {
   color: var(--clr-primary-1);
 }
 .links:nth-child(2) {
   animation: linksanime 3s ease-in forwards;
 }
-.links:nth-child(3) i{
+.links:nth-child(3) i {
   color: rgba(225, 48, 108, 1);
 }
 .links:nth-child(3) {
@@ -165,7 +165,6 @@ nav #link a:hover{
   animation: linksanime 5s ease-in forwards;
 }
 .about {
-  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -183,7 +182,7 @@ nav #link a:hover{
   animation: about 2s forwards;
 }
 .info-2-container {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 .skills {
   display: grid;
